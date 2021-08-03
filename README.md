@@ -42,191 +42,191 @@ Tạo `index.html`, `assets/css/style.css`, `assets/img`
 
 2) Tạo CSS cho `#header`
 
-	#header {
-	  height: 46px; 
-	  background-color: #000;
-	}
+		#header {
+		  height: 46px; 
+		  background-color: #000;
+		}
 
 3) Tạo CSS cho `#nav li`
 
-	#nav li {
-	  display: inline-block;
-	}
+		#nav li {
+		  display: inline-block;
+		}
 
 Thẻ `li` có thuộc tính mặc định là `display: list-item` nên tất cả content sẽ được xổ dọc xuống, ta có thể đổi thành `inline-block` để nó xổ ngang. `inline` là đứng trên 1 hàng, `block` là giữ lại tính chất khối để đặt được kích thước.
 
 4) Ẩn `subnav` của More đi
 
-	#nav .subnav {
-	  display: none;
-	}
+		#nav .subnav {
+		  display: none;
+		}
 
 5) Set chữ màu trắng, ẩn đường gạch chân của thẻ `a`
 
-	#nav li a {
-	  color: #fff;
-	  text-decoration: none;
-	}
+		#nav li a {
+		  color: #fff;
+		  text-decoration: none;
+		}
 
 6) Căn giữa chiều cao cho thẻ `#nav li a`
 
-	#nav li a {
-  		line-height: 46px;
-	}
-
+		#nav li a {
+	  		line-height: 46px;
+		}
+	
 Chữ luôn nằm giữa chiều cao của chính nó, ví dụ như thẻ `a` không có kích thước chiều cao bằng với thẻ `div` bao bọc nó thì mình cho `line-height` của thẻ `a` bằng với `chiều cao` của thẻ `div`, khi đó chữ sẽ được căn giữa chiều cao.
 
 7) Tăng độ giãn cách nhau cho thẻ `a`
 
-	#nav li a {
-	  padding: 0 24px;
-	}
+		#nav li a {
+		  padding: 0 24px;
+		}
 
 8) Đổi font cho toàn bộ trang web
 
-	html {
-	  font-family: Arial, Helvetica, sans-serif;
-	}
+		html {
+		  font-family: Arial, Helvetica, sans-serif;
+		}
 
 9) Thêm hiệu ứng khi rê vào thẻ `a` 
 
-	#nav li:hover a {
-	  color: #000;
-	  background-color: #ccc;
-	}
+		#nav li:hover a {
+		  color: #000;
+		  background-color: #ccc;
+		}
 
 Theo kinh nghiệm, chúng ta thêm hover cho thẻ `li` chứ không thêm vào thẻ `a`, vẫn có tác dụng như bình thường.
 
 10) Thay đổi kích thước chiều ngang và chiều dọc của thẻ `a`, khi đó hover cũng sẽ full viền.
 
-	#nav li a {
-	  display: inline-block;
-	}
+		#nav li a {
+		  display: inline-block;
+		}
 
 Tính chất mặc định của thẻ `a` là inline, không set được kích thước chiều ngang và chiều dọc. Vậy nên ta phải thêm `display: inline-block` để set được chiều ngang và chiều dọc. Sau đó thẻ a sẽ thừa kế thêm `line-height` của nó.
 
 11) Set background tạm thời cho `#slider` để dễ nhìn
 
-	#slider {
-	  min-height: 500px;
-	  background-color: #333;
-	}
+		#slider {
+		  min-height: 500px;
+		  background-color: #333;
+		}
 
 12) Hiện `subnav` của More
 
-	#nav .subnav {
-	  display: block;
-	}
+		#nav .subnav {
+		  display: block;
+		}
 
 13) Cho thẻ cha `li` có thuộc tính là `relative`
 
-	#nav li {
-	  position: relative;
-	}
+		#nav li {
+		  position: relative;
+		}
 
 14) Cho thẻ con `ul` có thuộc tính là `absolute`
 
-	#nav .subnav {
-	  position: absolute;
-	}
-
+		#nav .subnav {
+		  position: absolute;
+		}
+	
 15) Cho khối `#subnav` có màu trắng
 
-	#nav .subnav {
-	  background-color: #fff;
-	}
+		#nav .subnav {
+		  background-color: #fff;
+		}
 
 Lúc này, chứ trong khối `#subnav` cũng màu trắng vì thuộc tính `color: #fff` đã áp dụng lên cho thẻ  `a` cấp 1 và cấp 2.
 
 16) Thay đổi phạm vi áp dụng `color: #fff` trực tiếp lên thẻ `a` cấp 1 
 
-	#nav > li > a {
-	  color: #fff;
-	}
+		#nav > li > a {
+		  color: #fff;
+		}
 	
-	#nav li a {
-	  // color: #fff; (5) 
-	}
+		#nav li a {
+		  // color: #fff; (5) 
+		}
 
 18) Lúc này chữ của thẻ `a` cấp 2 sẽ thành màu tím, chúng ta cho màu thành `color: #000`
 
-	#nav .subnav a {
-	  color: #000;
-	}
+		#nav .subnav a {
+		  color: #000;
+		}
 	
 19) Thay đổi phạm vi áp dụng `background-color: #ccc;` khi hover trực tiếp lên thẻ `a` cấp 1
 
-	#nav > li:hover > a {
-	  background-color: #ccc; 
-	}  
+		#nav > li:hover > a {
+		  background-color: #ccc; 
+		}  
 
 20) Thêm thuộc tính khi hover thẻ `a` của `#subnav`
 
-	#nav .subnav li:hover a {
-	  color: #000;
-	  background-color: #ccc;
-	}
-
+		#nav .subnav li:hover a {
+		  color: #000;
+		  background-color: #ccc;
+		}
+	
 
 21) Lúc này khi hover vào thẻ a của `#subnav` thì phần hover sẽ không bao hết chiều ngang. Lý do là ở thẻ a cấp 2 (lúc này thuộc tính trong `#nav li a` đã áp dụng lên cho cả thẻ a cấp 1 và cấp 2) đang để là `display: inline-block`,nó sẽ set được chiều ngang và chiều dọc nhưng sẽ không kế thừa được chiều rộng của thẻ chứa nó, tức là thẻ `li`. Ta đổi thành `display: block` để giải quyết vấn đề này. 
-
-	#nav li a {
-	  display: block;
-	}
+	
+		#nav li a {
+		  display: block;
+		}
 
 22) Lúc này thuộc tính trong thẻ `#nav li` sẽ áp dụng lên cả thẻ `li` cấp 1 và cấp 2, vô tình, thẻ a cấp 2 sẽ thừa kế chiều rộng được tạo bằng thuộc tính `display: inline-block` của thẻ `li` cấp 2, để thuộc tính này chỉ áp dụng lên thẻ `li` cấp 1, ta thay đổi phạm vi áp dụng thuộc tính trên.
 
-	#nav li {
-	  /* display: inline-block; */
-	}
-
-	#nav > li {
-	  display: inline-block;
-	}
+		#nav li {
+		  /* display: inline-block; */
+		}
+	
+		#nav > li {
+		  display: inline-block;
+		}
 
 23) Bỏ thuộc tính dấu chấm của thẻ `ul` cấp 1 và 2
 
-	#nav, .subnav {
-	  list-style-type: none;
-	}
+		#nav, .subnav {
+		  list-style-type: none;
+		}
 
 24) UpperCase thẻ a cấp 1
-
-	#nav > li > a {
-	  text-transform: uppercase;
-	}
-
+	
+		#nav > li > a {
+		  text-transform: uppercase;
+		}
+	
  
 25) Giảm `padding` `left`, `right` của thẻ `a` cấp 2
 
-	#nav .subnav a {
-	  padding: 0 16px;
-	}
+		#nav .subnav a {
+		  padding: 0 16px;
+		}
 
 26) Thay đổi `line-height` của thẻ a cấp 2 `#subnav`
-
-	#nav .subnav a {
-	  line-height: 38px;
-	}
+	
+		#nav .subnav a {
+		  line-height: 38px;
+		}
 	
 27) Ẩn đi nền đen của `#slider`
 
-	#slider {
-	  /* min-height: 500px;
-	  background-color: #333; */
-	}
-
+		#slider {
+		  /* min-height: 500px;
+		  background-color: #333; */
+		}
+	
 28) Thêm bóng đổ cho `#subnav`
 
-	#nav .subnav {
-	  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-	}
+		#nav .subnav {
+		  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
 
 29) Ẩn đi `#subnav`
 
-	#nav .subnav {
-	  display: none;
-	}
+		#nav .subnav {
+		  display: none;
+		}
 
 29a) Hover vào thẻ `li` chứa `More` thì hiện thẻ `ul` `#subnav` con của `li`
 
@@ -236,105 +236,105 @@ Lúc này, chứ trong khối `#subnav` cũng màu trắng vì thuộc tính `co
 
 30) Trong một số trường hợp, một số trình duyệt sẽ không hiển thị đúng vị trí của `#subnav`, để giải quyết vấn đề này, chúng ta set vị trí cho `#subnav` luôn, mặc dù `position: absolute` đã giải quyết được vấn đề này.
 
-	#nav .subnav {
-	  top: 100%;
-	  left: 0;
-	}
+		#nav .subnav {
+		  top: 100%;
+		  left: 0;
+		}
 
 Tải Themify Icons tại `https://themify.me/themify-icons`, sau đỏ giải nén và cho thư mục Themify vào `assets/fonts`, nhúng font bằng `<link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">`
 
 31) Thêm `arrow` icon vào `More` và đặt tên class cho nó là `nav-arrow-down`
 
-	<a href="">More
-	  <i class="nav-arrow-down ti-angle-down"></i>
-	</a> 
+		<a href="">More
+		  <i class="nav-arrow-down ti-angle-down"></i>
+		</a> 
 
 32) Thay đổi kích thước của `nav-arrow-down`
 
-	#nav .nav-arrow-down {
-	  font-size: 14px;
-	}
+		#nav .nav-arrow-down {
+		  font-size: 14px;
+		}
 
 33) Thêm Search button
 
-	<div class="search-btn">
-		<i class="search-icon ti-search"></i>
-	</div> 
+		<div class="search-btn">
+			<i class="search-icon ti-search"></i>
+		</div> 
 
 34) Thay đổi màu sắc và kích thước của `search-icon` 
 
-	#header .search-icon {
-	  color: #fff;
-	  font-size: 14px;
-	}
+		#header .search-icon {
+		  color: #fff;
+		  font-size: 14px;
+		}
 
 35) Lúc này, thẻ `ul` chứa Navigation sẽ chiếm toàn bộ chiều ngang, chúng ta phải làm cho Navigation có nội dung đến đâu thì có chiều dài đến đấy. Sử dụng `inline-block` cho `#nav`
 
-	#nav {
-	  display: inline-block;
-	}
+		#nav {
+		  display: inline-block;
+		}
 
 36) Lúc này, thẻ `div` chứa `search-btn` cũng đang chiếm hết chiều ngang của thẻ cha là `#header`, vì quá dài nên không chui lên được thẻ `#header`. Chúng ta sử dụng `float: right` để kéo thẻ `div` sang bên phải, khi một thẻ div dù có kế thừa chiều ngang thì sử dụng dụng `float` thì sẽ mất tính chất kế thừa chiều ngang.
 
-	#header .search-btn {
-	  float: right;
-	}
+		#header .search-btn {
+		  float: right;
+		}
 
 37) Căn giữa chiều cao cho `search-icon` bằng cách sử dụng `line-height`
 
-	#header .search-icon {
-	  line-height: 46px;
-	}
-	
+		#header .search-icon {
+		  line-height: 46px;
+		}
+		
 38) Căn giữa chiều ngang cho `search-btn` bằng cách sử dụng `padding`
 
-	#header .search-btn:hover {
-	  background-color: #f44336;
-	}
+		#header .search-btn:hover {
+		  background-color: #f44336;
+		}
 
 39) Thay style trỏ chuột khi hover 
 
-	#header .search-btn:hover {
-	  cursor: pointer;
-	}
+		#header .search-btn:hover {
+		  cursor: pointer;
+		}
 
 40) Tăng chiều cao và set màu cho `#content` 
 
-	#content {
-	  height: 1000px;
-	  background-color: #ccc;
-	}
+		#content {
+		  height: 1000px;
+		  background-color: #ccc;
+		}
 
 41) Bám dính `#header` vào bên trên trình duyệt
 
-	#header {
-	  position: fixed;
-	  top: 0;
-	  left: 0;
-	  right: 0;
-	}
+		#header {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		}
 	
 với `position: fixed` nổi lên trên, `top: 0` dính sát mép bên trên, `left: 0` dính sát mép bên trái và `right: 0` dính sát mép bên phải.
 
 42) Tăng chiều cao và màu cho `#slider`
 
-	#slider {
-	  height: 400px;
-	  background-color: green;
-	}
+		#slider {
+		  height: 400px;
+		  background-color: green;
+		}
 
 43) Lúc này, chúng ta select `#slider` thì nó chọn luôn phần của `#header`. Lý do là `#header` sử dụng `position: fixed;`, nó sẽ nổi lên 1 tầng cao hơn và nhường vị trí đấy cho `#slider`, tức là `#header` đang đè lên trên `#slider`. Chúng ta mong muốn là phần `#content` sẽ nằm bên dưới mép của `#slider`. Vậy nên chúng ta sẽ sử dụng `margin-top` bằng với chiều cao của `#header`, tức là `#slider` sẽ bắt đầu từ vị trí `46px` của `#header`.
 	
-	#slider {
-	  margin-top: 46px;
-	}
+		#slider {
+		  margin-top: 46px;
+		}
 	
 44) Xóa màu và chiều cao của `#slider`
-
-	#slider {
-	  // height: 400px;
-	  // background-color: green;
-	}
+	
+		#slider {
+		  // height: 400px;
+		  // background-color: green;
+		}
 
 # 2. Slider
 
@@ -346,90 +346,90 @@ Tự lưu hình vào `assets/img/slider`
 
 45) Đặt `#slider` có kích thước chiều cao bằng 50% kích thước chiều ngang.
 
-	#slider {
-	  padding-top: 50%;
-	}
+		#slider {
+		  padding-top: 50%;
+		}
 
 Khi giá trị của thuộc tính padding-top là pixel thì không nói, nhưng khi là % thì nó là phần trăm của chiều ngang chính nó.
 
 46) Sử dụng `background-image` cho `#slider`, `background-image` nó sẽ đổ nền ảnh tính từ phần padding. 
 
-	#slider {
-	  background: url("/assets/img/slider/slider1.jpeg") top center / cover no-repeat;
-	}
+		#slider {
+		  background: url("/assets/img/slider/slider1.jpeg") top center / cover no-repeat;
+		}
 
 với `top` là lấy phần trên, `center` là lấy giữa, `cover` là kiểu kích thước và `no-repeat` là không lặp lại.
 
 47) Thêm `text-content`
 
-    <div id="slider">
-      <div class="text-content">
-        <h2 class="text-heading">New York</h2>
-        <p>The atmosphere in New York is lorem ipsum.</p>
-      </div>
-    </div>
+	    <div id="slider">
+	      <div class="text-content">
+	        <h2 class="text-heading">New York</h2>
+	        <p>The atmosphere in New York is lorem ipsum.</p>
+	      </div>
+	    </div>
 
 48) Thay đổi màu chữ của `#text-content`
-
-	#slider .text-content {
-	  color: #fff;
-	}
+	
+		#slider .text-content {
+		  color: #fff;
+		}
 
 49) Sử dụng `position: relative` cho `#slider` và `position: absolute` cho phần text. Lúc này, phần text sẽ được nổi lên 1 lớp so với `#slider`.	
 
-	#slider {
-	  position: relative;
-	}
-
-	#slider .text-content {
-	  position: absolute;
-	}
+		#slider {
+		  position: relative;
+		}
+	
+		#slider .text-content {
+		  position: absolute;
+		}
 
 50) Chỉnh vị trí từ đáy #slider đến text-content
 
-	#slider .text-content {
-	  bottom: 47px;
-	}
+		#slider .text-content {
+		  bottom: 47px;
+		}
 
 51) Căn giữa text-content
 
-	#slider .text-content {
-	  left: 50%;
-	  transform: translateX(-50%);
-	  text-align: center;
-	}
+		#slider .text-content {
+		  left: 50%;
+		  transform: translateX(-50%);
+		  text-align: center;
+		}
 
 Có thể thay `transform: translateX(-50%)`, `text-align: center` bằng `width: 100%` hoặc thay bằng `left: 0`, `right: 0`
 
 52) Giảm độ giày thẻ `#text-heading`
-
-	#slider .text-heading {
-	  font-weight: 500;
-	}
+	
+		#slider .text-heading {
+		  font-weight: 500;
+		}
 
 giá trị của `font-weight` giao động từ 100 đến 700
 
 53) Thay đổi cỡ chữ cho `#text-heading` và `#text-description`
 
-	#slider .text-heading {
-	  font-size: 24px;
-	}
-	
-	#slider .text-description {
-	  font-size: 15px;
-	}
+		#slider .text-heading {
+		  font-size: 24px;
+		}
+		
+		#slider .text-description {
+		  font-size: 15px;
+		}
 
 54) Thay đổi khoảng cách từ `#text-description` lên `#text-heading`
-	
-	#slider .text-description {
-	  margin-top: 25px;
-	}
+		
+		#slider .text-description {
+		  margin-top: 25px;
+		}
 
 55) Fix lỗi khi lăn chuột xuống dưới thì slider che mất thanh header.
 
-	#header {
-	  z-index: 1;
-	}
+		#header {
+		  z-index: 1;
+		}
 
 # 3. About section
 
@@ -447,91 +447,91 @@ giá trị của `font-weight` giao động từ 100 đến 700
 
 58) Set kích thước cho `.content-section`
 
-	#content .content-section {
-	  width: 800px;
-	}
+		#content .content-section {
+		  width: 800px;
+		}
 
 59) Căn `.content-section` ra giữa website
 
-	#content .content-section {
-	  margin-left: auto;
-	  margin-right: auto;
-	}
+		#content .content-section {
+		  margin-left: auto;
+		  margin-right: auto;
+		}
 	
 60) Căn dọc cho `.content-section`
 
-	#content .content-section {
-	  padding: 64px 0;
-	}
+		#content .content-section {
+		  padding: 64px 0;
+		}
 
 61) Căn giữa `.section-heading`, `.section-sub-heading`
 
-	#content .section-heading {
-	  text-align: center;
-	}
-	
-	#content .section-sub-heading {
-	  text-align: center;
-	}
+		#content .section-heading {
+		  text-align: center;
+		}
+		
+		#content .section-sub-heading {
+		  text-align: center;
+		}
 
 62) Thay đổi font-size cho `.section-heading`, `.section-sub-heading`
 
-	#content .section-heading {
-	  font-size: 30px;
-	}
-	
-	#content .section-sub-heading {
-	  font-size: 15px;
-	}
-	
+		#content .section-heading {
+		  font-size: 30px;
+		}
+		
+		#content .section-sub-heading {
+		  font-size: 15px;
+		}
+		
 63) Làm mỏng font chữ của `.section-heading`
 
-	#content .section-heading {
-	  font-weight: 500;
-	}
+		#content .section-heading {
+		  font-weight: 500;
+		}
 	
 64) Làm giãn đều chữ của `.section-heading`
 
-	#content .section-heading {
-	  letter-spacing: 4px;
-	}
+		#content .section-heading {
+		  letter-spacing: 4px;
+		}
 
 65) Thay đổi khoảng cách từ `.section-sub-heading` lên `.section-heading`
 	
-	#content .section-sub-heading  {
-	  margin-top: 25px;
-	}
+		#content .section-sub-heading  {
+		  margin-top: 25px;
+		}
 	
 66) Thay đổi khoảng cách từ `.about-text` lên `.section-sub-heading` và font-size của `.about-text`.
 	
-	#content .about-text {
-  		margin-top: 25px;
-  		font-size: 15px;
-	}
-
+		#content .about-text {
+	  		margin-top: 25px;
+	  		font-size: 15px;
+		}
+	
 67) Set chữ nghiêng cho `.section-sub-heading`
 
-	#content .section-sub-heading {
-	  font-style: italic;
-	}
-	
+		#content .section-sub-heading {
+		  font-style: italic;
+		}
+		
 68) Set chữ mờ cho `.section-sub-heading`
 
-	#content .section-sub-heading {
-		  opacity: 0.6;
-		}
-
+		#content .section-sub-heading {
+			  opacity: 0.6;
+			}
+	
 69) Làm phẳng chữ 2 bên cho `.about-text`.
 
-	#content .about-text {
-	  text-align: justify;
-	}
+		#content .about-text {
+		  text-align: justify;
+		}
 	
 70) Thay đổi khoảng cách giữa 2 dòng của `.about-text`.
 
-	#content .about-text {
-	  line-height: 1.4;
-	}
+		#content .about-text {
+		  line-height: 1.4;
+		}
 
 Chiều cao của 1 dòng thì sử dụng `line-height`. Với Tiếng Anh là 1.4 và Tiếng Việt là 1.6
 
@@ -546,80 +546,80 @@ Chiều cao của 1 dòng thì sử dụng `line-height`. Với Tiếng Anh là 
 
 72) Thêm Contact section
 
-	<!-- Contact section -->
-	<div class="content-section">
-		<h2 class="section-heading">CONTACT</h2>
-		<p class="section-sub-heading">Fan? Drop a note!</p>
-	</div>
+		<!-- Contact section -->
+		<div class="content-section">
+			<h2 class="section-heading">CONTACT</h2>
+			<p class="section-sub-heading">Fan? Drop a note!</p>
+		</div>
 	
 Tự lưu hình vào `assets/img/band`
 
 73) Thêm `member-list`
 
-	  <div class="content-section">
-	    <div class="member-list">
-	      <div class="member-item">
-	        <p class="member-name">Name</p>
-	        <img src="./assets/img/band/member1.jpeg" alt="Name" class="member-img">
-	      </div>
-	      <div class="member-item"> 
-	        <p class="member-name">Name</p>
-	        <img src="./assets/img/band/member1.jpeg" alt="Name" class="member-img">
-	      </div>
-	      <div class="member-item">
-	        <p class="member-name">Name</p>
-	        <img src="./assets/img/band/member1.jpeg" alt="Name" class="member-img">
-	      </div>
-	    </div>
-  </div>
+		  <div class="content-section">
+		    <div class="member-list">
+		      <div class="member-item">
+		        <p class="member-name">Name</p>
+		        <img src="./assets/img/band/member1.jpeg" alt="Name" class="member-img">
+		      </div>
+		      <div class="member-item"> 
+		        <p class="member-name">Name</p>
+		        <img src="./assets/img/band/member1.jpeg" alt="Name" class="member-img">
+		      </div>
+		      <div class="member-item">
+		        <p class="member-name">Name</p>
+		        <img src="./assets/img/band/member1.jpeg" alt="Name" class="member-img">
+		      </div>
+		    </div>
+	  </div>
   
 74) Set 3 `.member-item` đứng chung 1 hàng
 
-	#content .member-item {
-	  float: left;
-	}
+		#content .member-item {
+		  float: left;
+		}
 
 75) Thay đổi khoảng cách từ `.member-list` đến `.about-text`
 
-	#content .member-list {
-	  margin-top: 48px;
-	}
+		#content .member-list {
+		  margin-top: 48px;
+		}
 
 76) Chia đều `.member-list` thành 3 phần, tức là mỗi `.member-item` chiếm 33.33333%
 
-	#content .member-item {
-	  width: 33.33333%;
-	}
+		#content .member-item {
+		  width: 33.33333%;
+		}
 
 Có thể sử dụng hàm để chia thành 33.33333% bằng `calc(100% / 3)`
 
 77) Căn giữa `.member-list`
 
-	#content .member-list {
-	  text-align: center;
-	}
+		#content .member-list {
+		  text-align: center;
+		}
 	
 78) Thay đổi khoảng cách từ `.member-img` đến `.member-name`
 
-	#content .member-img {
-	  margin-top: 15px;
-	}
+		#content .member-img {
+		  margin-top: 15px;
+		}
 
 79) Thay đổi kích thước chiều ngang của `.member-img`
 
-	#content .member-img {
-	  width: 154px;
-	}
+		#content .member-img {
+		  width: 154px;
+		}
 
 80) Bo tròn `.member-img`
 
-	#content .member-img {
-	  border-radius: 4px;
-	}
+		#content .member-img {
+		  border-radius: 4px;
+		}
 
 81) Khi ta select element `.member-list` thì trình duyệt không select toàn bộ 3 `.member-item` mà chỉ select 1 lớp nhỏ không liên quan. Đây là 1 lỗi khi sử dụng `float`. Nếu các thẻ con bên trong 1 thẻ cha sử dụng `float` thì thẻ cha bên ngoài sẽ bị co lại. Để khắc phục, chúng ta thêm 1 class là con của class cha `.member-list` có tên là clear. 
 
-	<div class="clear"></div>	
+		<div class="clear"></div>	
 	
 Phía CSS chúng ta set:
 
@@ -633,12 +633,12 @@ Hoặc chúng ta thêm  `overflow: hidden` vào thẻ cha `.member-list`.
 
 82) Khi đổ nền đen, chúng ta chỉ đổ được nền ở Content, Padding nhưng không đổ được Margin. Để giải quyết, chúng ta tạo 1 thẻ `div` cha cho `content-section` và để nền đen cho thẻ `div` có tên là `tour-section`
 
-	  <div class="tour-section">
-	    <div class="content-section">
-	      <h2 class="section-heading">TOUR DATES</h2>
-	      <p class="section-sub-heading">Remember to book your tickets!</p>
-	    </div>
-	  </div>
+		  <div class="tour-section">
+		    <div class="content-section">
+		      <h2 class="section-heading">TOUR DATES</h2>
+		      <p class="section-sub-heading">Remember to book your tickets!</p>
+		    </div>
+		  </div>
 
 
 CSS:
@@ -649,24 +649,24 @@ CSS:
 
 83) Tạo class chữ màu trắng để sau này dùng lại nhiều lần.
 
-	.text-white {
-		color: #fff !important;
-	}
+		.text-white {
+			color: #fff !important;
+		}
 
 Dùng important khi class đó chỉ có 1 chức năng. Nếu dùng linh tinh rất khó kiểm soát.
 
 84) Set chữ màu trắng cho `.section-heading` và `.section-sub-heading` bằng cách thêm class `text-white`
 
-	<h2 class="section-heading text-white">TOUR DATES</h2>
-	<p class="section-sub-heading text-white">Remember to book your tickets!</p>
+		<h2 class="section-heading text-white">TOUR DATES</h2>
+		<p class="section-sub-heading text-white">Remember to book your tickets!</p>
 	
 85) Thêm thẻ ul chứa danh sách các đợt vé và `background-color` màu trắng cho nó.
 
-	<ul class="ticket-list">
-		<li>September <span class="sold-out">Sold out</span></li>
-	    <li>October <span class="sold-out">Sold out</span></li>
-	    <li>November <span class="quantity">3</span></li>
-	 </ul> 
+		<ul class="ticket-list">
+			<li>September <span class="sold-out">Sold out</span></li>
+		    <li>October <span class="sold-out">Sold out</span></li>
+		    <li>November <span class="quantity">3</span></li>
+		 </ul> 
 
 CSS:
 
@@ -676,86 +676,86 @@ CSS:
 
 86) Thay đổi khoảng cách từ `.ticket-list` đến `.section-sub-heading`
 
-	.ticket-list {
-	  margin-top: 40px;
-	}
+		.ticket-list {
+		  margin-top: 40px;
+		}
 	
 87) Thay đổi cỡ chữ của thẻ `.ticket-list li`
 
-	.ticket-list li {
-	  font-size: 15px;
-	}
+		.ticket-list li {
+		  font-size: 15px;
+		}
 
 88) Căn đều ngang dọc cho thẻ `.ticket-list li`
 
-	.ticket-list li {
-	  padding: 11px 16px;
-	}
+		.ticket-list li {
+		  padding: 11px 16px;
+		}
 
 89) Tạo `border-bottom` cho `.ticket-list li`
 
-	.ticket-list li {
-	  border-bottom: 1px solid #ddd;
-	}
+		.ticket-list li {
+		  border-bottom: 1px solid #ddd;
+		}
 
 90) Thay đổi màu chữ cho `.ticket-list li` 
 
-	.ticket-list li {
-	  color: #757575;
-	}
+		.ticket-list li {
+		  color: #757575;
+		}
 
 91) Thêm màu nên và màu chữ cho `.ticket-list .sold-out`
 
-	.ticket-list .sold-out {
-	  background-color: #f44336;
-	  color: #fff;
-	}
+		.ticket-list .sold-out {
+		  background-color: #f44336;
+		  color: #fff;
+		}
 
 92) Padding cho `.ticket-list .sold-out`
 	
-	.ticket-list .sold-out {
-	  padding: 3px 4px;
-	}
+		.ticket-list .sold-out {
+		  padding: 3px 4px;
+		}
 
 93) Vị trí của `.ticket-list .sold-out` 
 
-	.ticket-list .sold-out {
-	  margin-left: 16px;
-	}
+		.ticket-list .sold-out {
+		  margin-left: 16px;
+		}
 
 94) Di chuyển `.ticket-list .quantity` sang phải
 
-	.ticket-list .quantity {
-	  float: right;
-	}
+		.ticket-list .quantity {
+		  float: right;
+		}
 
 95) Set chiều rộng, cao, màu nền và màu chữ cho `.ticket-list .quantity`
 	
-	.ticket-list .quantity {
-	  width: 24px;
-	  height: 24px;
-	  background-color: #000;
-	  color: #fff;
-	}
+		.ticket-list .quantity {
+		  width: 24px;
+		  height: 24px;
+		  background-color: #000;
+		  color: #fff;
+		}
 
 96) Set bo tròn cho `.ticket-list .quantity`
 
-	.ticket-list .quantity {
-	  border-radius: 50%;
-	 }
+		.ticket-list .quantity {
+		  border-radius: 50%;
+		 }
 
 97) Căn giữa, căn dọc cho `.ticket-list .quantity`
 
-	.ticket-list .quantity {
-	  text-align: center;
-	  line-height: 24px;
-	}
+		.ticket-list .quantity {
+		  text-align: center;
+		  line-height: 24px;
+		}
 
 98) `.ticket-list .quantity` vẫn cảm thấy bị lệch, chúng ta sử dụng `margin` âm
 
-	.ticket-list .quantity {
-	  margin-top: -3px;
-	}
+		.ticket-list .quantity {
+		  margin-top: -3px;
+		}
 
 Để sử dụng `margin` âm thì class phải sử dụng `float` 
 
@@ -763,9 +763,9 @@ CSS:
 
 99) Bỏ dấu chấm của `.ticket-list li`
 
-	.ticket-list li {
-	  list-style-type: none;
-	}
+		.ticket-list li {
+		  list-style-type: none;
+		}
 
 Lưu hình địa điểm lưu trong `assets/img/places`
 
