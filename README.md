@@ -3,42 +3,42 @@ Tạo `index.html`, `assets/css/style.css`, `assets/img`
 
 0) Tạo khung HTML
 	
-	<div id="main">
-	    <div id="header">
-	      <ul id="nav">
-	        <li><a href="">Home</a></li>
-	        <li><a href="">Band</a></li>
-	        <li><a href="">Tour</a></li>
-	        <li><a href="">Contact</a></li>
-	        <li>
-	          <a href="">More</a>
-	          <ul class="subnav">
-	            <li><a href="">Merchandise</a></li>
-	            <li><a href="">Extras</a></li>
-	            <li><a href="">Media</a></li>
-	          </ul>
-	        </li>
-	      </ul>
-	    </div>
-	
-	    <div id="slider">
-	    </div>
-	
-	    <div id="content">
-	    </div>
-	    
-	    <div id="footer">
-	    </div>
-	    
-  	</div>
+		<div id="main">
+		    <div id="header">
+		      <ul id="nav">
+		        <li><a href="">Home</a></li>
+		        <li><a href="">Band</a></li>
+		        <li><a href="">Tour</a></li>
+		        <li><a href="">Contact</a></li>
+		        <li>
+		          <a href="">More</a>
+		          <ul class="subnav">
+		            <li><a href="">Merchandise</a></li>
+		            <li><a href="">Extras</a></li>
+		            <li><a href="">Media</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div>
+		
+		    <div id="slider">
+		    </div>
+		
+		    <div id="content">
+		    </div>
+		    
+		    <div id="footer">
+		    </div>
+		    
+	  	</div>
 	
 1) Tạo `Reset CSS`
 
-	* {
-	  padding: 0;
-	  margin: 0;
-	  box-sizing: border-box;
-	}
+		* {
+		  padding: 0;
+		  margin: 0;
+		  box-sizing: border-box;
+		}
 
 2) Tạo CSS cho `#header`
 
